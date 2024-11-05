@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: "arabic-font";
+  @apply text-black;
+}
+
+.curve-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.curve-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+}
+
+.curve-top .shape-fill {
+  fill: #ffffff;
+}
+
+.curve-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.curve-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+}
+
+.curve-bottom .shape-fill {
+  fill: #ffffff;
+}
+
+@font-face {
+  font-family: "arabic-font";
+  src: url(/fonts/arabic-font.ttf);
+  font-weight: normal;
+}
+
+@layer utilities {
+  .animate-custom-spin {
+    animation: custom-spin 3s linear infinite;
+    position: absolute;
+    top: 40%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes custom-spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
