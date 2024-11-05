@@ -42,7 +42,7 @@ const Certificates = (setSelectedPage) => {
       className="relative lg:min-h-screen z-20 my-16 flex items-center justify-center"
     >
       {/* Gradient Layer */}
-      <div className="absolute inset-0 bg-gradient-greenblue"></div>
+      <div className="absolute inset-0 bg-gradient-greenblue-light"></div>
 
       {/* Background Image Layer */}
       <div
